@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'pl-button', // pl is our prefix
+  selector: 'ui-button', // pl is our prefix
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })

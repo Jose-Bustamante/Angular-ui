@@ -1,5 +1,5 @@
 {
-  "name": "staples-ui",
+  "name": "@josebustamante/staples-ui",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^11.1.2",
