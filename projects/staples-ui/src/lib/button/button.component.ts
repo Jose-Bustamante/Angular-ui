@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input('label') label: string | null = 'Click me!';
-  @Input('pink') pink: boolean = true;
+  @Input('pink') pink: boolean = false;
 
   constructor() { }
 

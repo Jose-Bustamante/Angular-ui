@@ -24,7 +24,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-44ca8a6c6063203a85819d3d2bb71a06",
+            "id": "component-ButtonComponent-279bdd462bcb604d8579fc60c2a388a9",
             "file": "projects/staples-ui/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -49,7 +49,7 @@
                 },
                 {
                     "name": "pink",
-                    "defaultValue": "true",
+                    "defaultValue": "false",
                     "line": 10,
                     "type": "boolean"
                 }
@@ -71,7 +71,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'pl-button', // pl is our prefix\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null = 'Click me!';\n  @Input('pink') pink: boolean = true;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'pl-button', // pl is our prefix\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null = 'Click me!';\n  @Input('pink') pink: boolean = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
