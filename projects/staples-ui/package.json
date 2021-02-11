@@ -1,6 +1,7 @@
 {
   "name": "@josebustamante/staples-ui",
   "version": "0.0.1",
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/common": "^11.1.2",
     "@angular/core": "^11.1.2"
