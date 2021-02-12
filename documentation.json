@@ -24,14 +24,14 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-279bdd462bcb604d8579fc60c2a388a9",
+            "id": "component-ButtonComponent-2afb9333710a33ad805d7065b08afc74",
             "file": "projects/staples-ui/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "pl-button",
+            "selector": "ui-button",
             "styleUrls": [
                 "./button.component.scss"
             ],
@@ -71,7 +71,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'pl-button', // pl is our prefix\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null = 'Click me!';\n  @Input('pink') pink: boolean = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'ui-button', // pl is our prefix\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null = 'Click me!';\n  @Input('pink') pink: boolean = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -165,6 +165,9 @@
                 {
                     "type": "exports",
                     "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        },
                         {
                             "name": "StaplesUiComponent"
                         }
