@@ -19,45 +19,7 @@
             "type": "injectable"
         }
     ],
-    "classes": [
-        {
-            "name": "AppPage",
-            "id": "class-AppPage-ee2067dfb1c303f41003aea7d82d51e0",
-            "file": "projects/staples-ui-custom-elements/e2e/src/app.po.ts",
-            "type": "class",
-            "sourceCode": "import { browser, by, element } from 'protractor';\n\nexport class AppPage {\n  async navigateTo(): Promise<unknown> {\n    return browser.get(browser.baseUrl);\n  }\n\n  async getTitleText(): Promise<string> {\n    return element(by.css('app-root .content span')).getText();\n  }\n}\n",
-            "properties": [],
-            "methods": [
-                {
-                    "name": "getTitleText",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "Promise<string>",
-                    "typeParameters": [],
-                    "line": 8,
-                    "modifierKind": [
-                        120
-                    ]
-                },
-                {
-                    "name": "navigateTo",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "Promise<unknown>",
-                    "typeParameters": [],
-                    "line": 4,
-                    "modifierKind": [
-                        120
-                    ]
-                }
-            ],
-            "indexSignatures": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "hostBindings": [],
-            "hostListeners": []
-        }
-    ],
+    "classes": [],
     "directives": [],
     "components": [
         {
@@ -497,15 +459,6 @@
         "count": 0,
         "status": "low",
         "files": [
-            {
-                "filePath": "projects/staples-ui-custom-elements/e2e/src/app.po.ts",
-                "type": "class",
-                "linktype": "classe",
-                "name": "AppPage",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
             {
                 "filePath": "projects/staples-ui-custom-elements/src/app/app.component.ts",
                 "type": "component",
