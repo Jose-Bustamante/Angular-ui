@@ -1,4 +1,18 @@
-# PocAngular
+# STAPLES UI Library
+
+## Usage commands
+
+### Running
+
+Run Storybook
+`npm run storybook`
+### BUILD
+
+To build the UI Library
+`ng build --project=staples-ui`
+
+To build the Custom-Elements Project
+`ng build --project=staples-ui-custom-elements`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 

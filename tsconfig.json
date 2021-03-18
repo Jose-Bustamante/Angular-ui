@@ -19,6 +19,10 @@
       "staples-ui": [
         "dist/staples-ui/staples-ui",
         "dist/staples-ui"
+      ],
+      "staples-ui-custom-elements": [
+        "dist/staples-ui-custom-elements/staples-ui-custom-elements",
+        "dist/staples-ui-custom-elements"
       ]
     },
     "module": "es2020",

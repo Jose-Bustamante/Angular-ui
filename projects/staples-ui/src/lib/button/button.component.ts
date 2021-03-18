@@ -8,10 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input('label') label: string | null = 'Click me!';
   @Input('pink') pink: boolean = false;
+  @Input('click') click: () => void = () => null;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick(event: Event): void {
+    console.log('Clicked Beach', event);
+    this.click();
   }
 
 }
