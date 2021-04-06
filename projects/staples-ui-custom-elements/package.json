@@ -4,7 +4,8 @@
   "description": "Staples UI translated into custom-elements",
   "main": "./src/main.ts",
   "scripts": {
-    "test": "test"
+    "build:elements": "ng build --prod --project staples-ui-custom-elements --output-hashing none && npm run pack:elements && cp projects/staples-ui-custom-elements/package.json dist/staples-ui-custom-elements",
+    "pack:elements": "cat ./dist/staples-ui-custom-elements/{runtime,polyfills,main}-es5.js > dist/staples-ui-custom-elements/elements.js && ls -lah dist/staples-ui-custom-elements/elements.js",
   },
   "keywords": [
     "Staples",

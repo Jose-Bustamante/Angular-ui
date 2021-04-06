@@ -10,7 +10,9 @@
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
     "build-storybook": "npm run docs:json && build-storybook",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:elements": "ng build --prod --project staples-ui-custom-elements --output-hashing none && npm run pack:elements && cp projects/staples-ui-custom-elements/package.json dist/staples-ui-custom-elements",
+    "pack:elements": "cat ./dist/staples-ui-custom-elements/{runtime,polyfills,main}.js > dist/staples-ui-custom-elements/elements.js && ls -lah dist/staples-ui-custom-elements/elements.js"
   },
   "private": true,
   "dependencies": {

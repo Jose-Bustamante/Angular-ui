@@ -22,7 +22,25 @@
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/staples-ui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/staples-ui/tsconfig.lib.prod.json",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "serviceWorker": true,
+              "deleteOutputPath": true,
+              "budgets": [
+                  {
+                      "type": "initial",
+                      "maximumWarning": "1mb",
+                      "maximumError": "3mb"
+                  }
+              ]
             }
           }
         },
