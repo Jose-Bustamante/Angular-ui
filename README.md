@@ -11,10 +11,13 @@ Run Storybook
 To build the UI Library
 `ng build --project=staples-ui`
 
-To build the Custom-Elements Project (Minified -  Use this one)
+To build the UI Library PROD Ready
+`ng build --project=staples-ui --prod`
+
+To build the Custom-Elements Project (Prod ready - Minified -  Use this one)
 `npm run build:elements`
 
-To build the Custom-Elements Project (No proper minification)
+To build the Custom-Elements Project (NOT Prod ready - No proper minification)
 `ng build --project=staples-ui-custom-elements`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
