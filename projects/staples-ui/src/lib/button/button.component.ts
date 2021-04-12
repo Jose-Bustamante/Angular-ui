@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'ui-button', // pl is our prefix
@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input('label') label: string | null = 'Click me!';
   @Input('pink') pink: boolean = false;
-  @Input('click') click: () => void = () => null;
+  @Output() valueChanged = new EventEmitter();
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class ButtonComponent implements OnInit {
 
   onClick(event: Event): void {
     console.log('Clicked Beach', event);
-    this.click();
+    this.valueChanged.emit('test');
   }
 
 }
