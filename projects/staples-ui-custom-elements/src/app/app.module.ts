@@ -4,7 +4,7 @@ import { createCustomElement } from '@angular/elements';
 
 import {StaplesUiModule} from '../../../staples-ui/src/lib/staples-ui.module';
 import {ButtonComponent} from '../../../staples-ui/src/lib/button/button.component';
-
+import {SideNavComponent} from '../../../staples-ui/src/lib/side-nav/side-nav.component';
 @NgModule({
 
   imports: [
@@ -17,7 +17,10 @@ export class AppModule {
   constructor(private injector: Injector){}
 
   ngDoBootstrap(){
-    const element = createCustomElement(ButtonComponent, { injector: this.injector })
-    customElements.define("ce-button", element);
+    const ceButton = createCustomElement(ButtonComponent, { injector: this.injector })
+    customElements.define("ce-button", ceButton);
+
+    const ceSideNav = createCustomElement(SideNavComponent, { injector: this.injector })
+    customElements.define("ce-side-nav", ceSideNav);
   }
 }
