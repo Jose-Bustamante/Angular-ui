@@ -2,6 +2,8 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { moduleMetadata } from '@storybook/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+
 
 import {MatSidenavModule} from '@angular/material/sidenav';
 
@@ -12,17 +14,18 @@ export default {
   component: SideNavComponent,
   decorators: [
     moduleMetadata({
-        imports: [BrowserAnimationsModule, BrowserModule, MatSidenavModule]
+      declarations: [SideNavComponent],
+      imports: [CommonModule, BrowserAnimationsModule, BrowserModule, MatSidenavModule]
     })
   ],
-  declarations: [SideNavComponent],
 } as Meta;
 
 const Template: Story<SideNavComponent> = (args: SideNavComponent) => ({
   component: SideNavComponent,
+  template: `<div>OLA QUE ASHE<ui-side-nav></ui-side-nav></div>`,
   props: {
     ...args
-  },
+  }
 });
 
 export const SideNav = Template.bind({});
