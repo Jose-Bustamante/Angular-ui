@@ -122,7 +122,7 @@
         },
         {
             "name": "SideNavComponent",
-            "id": "component-SideNavComponent-94d474092493cf7d679d3c38506798bf",
+            "id": "component-SideNavComponent-9b02fd94d4742b85424082f73baa3f22",
             "file": "projects/staples-ui/src/lib/side-nav/side-nav.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -142,11 +142,11 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "input",
-                    "type": "any",
+                    "name": "drawerRef",
+                    "type": "MatDrawer",
                     "optional": false,
                     "description": "",
-                    "line": 10,
+                    "line": 11,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -160,7 +160,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 9
+                    "line": 10
                 }
             ],
             "methodsClass": [
@@ -170,7 +170,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 13
+                    "line": 14
                 },
                 {
                     "name": "onCustomClick",
@@ -178,7 +178,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17
+                    "line": 18
                 }
             ],
             "hostBindings": [],
@@ -186,11 +186,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, ViewChild } from '@angular/core';\n\n@Component({\n  selector: 'ui-side-nav',\n  templateUrl: './side-nav.component.html',\n  styleUrls: ['./side-nav.component.scss']\n})\nexport class SideNavComponent implements OnInit {\n  showFiller = false;\n  @ViewChild('drawer') input: any;\n  constructor() { }\n\n  ngOnInit(): void {\n\n  }\n\n  onCustomClick(): void {\n    console.log('TOGGLLEEEE');\n    // this.input.toggle();\n  }\n\n}\n",
+            "sourceCode": "import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';\nimport {MatDrawer} from '@angular/material/sidenav';\n\n@Component({\n  selector: 'ui-side-nav',\n  templateUrl: './side-nav.component.html',\n  styleUrls: ['./side-nav.component.scss']\n})\nexport class SideNavComponent implements OnInit {\n  showFiller = false;\n  @ViewChild('drawer') drawerRef!: MatDrawer;\n  constructor() { }\n\n  ngOnInit(): void {\n\n  }\n\n  onCustomClick(): void {\n    console.log('TOGGLLEEEE');\n    this.drawerRef.toggle();\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".example-container {\n  width: 100%;\n  height: 100vh;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav {\n  padding: 20px;\n}",
+                    "data": ".example-container {\n  width: 100%;\n  height: 90vh;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav {\n  padding: 20px;\n}",
                     "styleUrl": "./side-nav.component.scss"
                 }
             ],
@@ -199,12 +199,12 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 10
+                "line": 11
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<!-- <mat-drawer-container class=\"example-container\" autosize>\n  <mat-drawer #drawer class=\"example-sidenav\" mode=\"side\">\n    <p>Content of the drawer</p>\n  </mat-drawer>\n\n  <div class=\"example-sidenav-content\">\n    <button type=\"button\" mat-button (click)=\"drawer.toggle()\">\n      Toggle sidenav\n    </button>\n\n  </div>\n\n</mat-drawer-container> -->\n\n<div>\n  <button type=\"button\" mat-button (click)=\"onCustomClick()\">\n    Button dos mdfk\n  </button>\n</div>"
+            "templateData": "<div>\n  <mat-sidenav-container class=\"example-container\" autosize>\n    <mat-sidenav #drawer class=\"example-sidenav\" mode=\"over\">\n      <p>Content of the drawer</p>\n      <ng-content></ng-content>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <div class=\"example-sidenav-content\">\n        <button type=\"button\" mat-button (click)=\"drawer.toggle()\">\n          Toggle sidenav\n        </button>\n        <ng-content></ng-content>\n      </div>\n    </mat-sidenav-content>\n\n  </mat-sidenav-container>\n</div>"
         },
         {
             "name": "StaplesUiComponent",
@@ -418,7 +418,7 @@
                 "subtype": "variable",
                 "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
                 "type": "Story<SideNavComponent>",
-                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  props: {\n    ...args\n  },\n})"
+                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
             }
         ],
         "functions": [],
@@ -520,7 +520,7 @@
                     "subtype": "variable",
                     "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
                     "type": "Story<SideNavComponent>",
-                    "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  props: {\n    ...args\n  },\n})"
+                    "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
                 }
             ]
         },

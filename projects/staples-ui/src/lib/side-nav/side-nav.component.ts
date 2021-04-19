@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {MatDrawer} from '@angular/material/sidenav';
 
 @Component({
   selector: 'ui-side-nav',
@@ -7,7 +8,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 })
 export class SideNavComponent implements OnInit {
   showFiller = false;
-  @ViewChild('drawer') input: any;
+  @ViewChild('drawer') drawerRef!: MatDrawer;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,7 +17,7 @@ export class SideNavComponent implements OnInit {
 
   onCustomClick(): void {
     console.log('TOGGLLEEEE');
-    this.input.toggle();
+    this.drawerRef.toggle();
   }
 
 }

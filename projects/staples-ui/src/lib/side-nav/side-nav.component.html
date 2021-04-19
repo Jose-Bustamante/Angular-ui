@@ -1,21 +1,18 @@
-  <div>
-  <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
+<div>
+  <mat-sidenav-container class="example-container" autosize>
+    <mat-sidenav #drawer class="example-sidenav" mode="over">
       <p>Content of the drawer</p>
-    </mat-drawer>
+      <ng-content></ng-content>
+    </mat-sidenav>
 
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
+    <mat-sidenav-content>
+      <div class="example-sidenav-content">
+        <button class="special" type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+        </button>
+        <ng-content></ng-content>
+      </div>
+    </mat-sidenav-content>
 
-    </div>
-
-  </mat-drawer-container>
-
-  <div>
-    <button type="button" mat-button (click)="onCustomClick()">
-      Button dos mdfk
-    </button>
-  </div>
+  </mat-sidenav-container>
 </div>

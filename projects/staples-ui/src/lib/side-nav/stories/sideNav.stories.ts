@@ -22,7 +22,10 @@ export default {
 
 const Template: Story<SideNavComponent> = (args: SideNavComponent) => ({
   component: SideNavComponent,
-  template: `<div>OLA QUE ASHE<ui-side-nav></ui-side-nav></div>`,
+  template: `<div>This is the header <br/>
+              <ui-side-nav>This is inside content</ui-side-nav>
+              This is the footer
+            </div>`,
   props: {
     ...args
   }
