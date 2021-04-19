@@ -104,7 +104,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "button {\n  background: blue;\n  padding: 1rem 2rem;\n  border-radius: 3px;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: white;\n  box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3),\n    0 6px 35px rgba(55, 55, 200, 0.7);\n  cursor: pointer;\n\n  &.make-pink {\n    background: #ff00a2;\n    box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3), 0 6px 35px rgb(200 55 150 / 70%);\n  }\n}",
+                    "data": "",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -118,7 +118,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button\n  [attr.is-pink]=\"pink\"\n  [ngClass]=\"{'make-pink': pink}\"\n  (click)=\"onClick($event)\"\n  >{{label ? \"😎 \" + label : \"No Label provided 🧐\"}}</button>\n"
+            "templateData": "<div>\n    <button mat-button color=\"primary\">Primary</button>\n</div>\n"
         },
         {
             "name": "SideNavComponent",
@@ -204,7 +204,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div>\n  <mat-sidenav-container class=\"example-container\" autosize>\n    <mat-sidenav #drawer class=\"example-sidenav\" mode=\"over\">\n      <p>Content of the drawer</p>\n      <ng-content></ng-content>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <div class=\"example-sidenav-content\">\n        <button type=\"button\" mat-button (click)=\"drawer.toggle()\">\n          Toggle sidenav\n        </button>\n        <ng-content></ng-content>\n      </div>\n    </mat-sidenav-content>\n\n  </mat-sidenav-container>\n</div>"
+            "templateData": "<div>\n  <mat-sidenav-container class=\"example-container\" autosize>\n    <mat-sidenav #drawer class=\"example-sidenav\" mode=\"over\">\n      <p>Content of the drawer</p>\n      <ng-content></ng-content>\n    </mat-sidenav>\n\n    <mat-sidenav-content>\n      <div class=\"example-sidenav-content\">\n        <button class=\"special\" type=\"button\" mat-button (click)=\"drawer.toggle()\">\n          Toggle sidenav\n        </button>\n        <ng-content></ng-content>\n      </div>\n    </mat-sidenav-content>\n\n  </mat-sidenav-container>\n</div>"
         },
         {
             "name": "StaplesUiComponent",
@@ -338,7 +338,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -346,7 +346,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -386,14 +386,14 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "literal type"
             },
             {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "literal type"
             },
             {
@@ -408,40 +408,23 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
+                "type": "Story<SideNavComponent>",
+                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
-                "type": "Story<SideNavComponent>",
-                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
+                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/staples-ui/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui/src/test.ts",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui/src/test.ts",
-                    "type": "literal type"
-                }
-            ],
             "projects/staples-ui-custom-elements/src/test.ts": [
                 {
                     "name": "context",
@@ -456,6 +439,23 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/staples-ui-custom-elements/src/test.ts",
+                    "type": "literal type"
+                }
+            ],
+            "projects/staples-ui/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui/src/test.ts",
                     "type": "literal type"
                 }
             ],
