@@ -19,5 +19,4 @@ export class ButtonComponent implements OnInit {
     console.log('Clicked Beach', event);
     this.valueChanged.emit('test');
   }
-
 }
