@@ -118,7 +118,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button\n  [attr.is-pink]=\"pink\"\n  [ngClass]=\"{'make-pink': pink}\"\n  (click)=\"onClick($event)\"\n  mat-button\n  >{{label ? \"😎 \" + label : \"No Label provided 🧐\"}}</button>\n"
+            "templateData": "<div>\n  <button\n    [attr.is-pink]=\"pink\"\n    [ngClass]=\"{'make-pink': pink}\"\n    (click)=\"onClick($event)\"\n    mat-raised-button\n    >\n    {{label ? \"😎 \" + label : \"No Label provided 🧐\"}}\n  </button>\n\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>delete</mat-icon>\n  </button>\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>face</mat-icon>\n  </button>\n</div>"
         },
         {
             "name": "SideNavComponent",
@@ -418,7 +418,7 @@
                 "subtype": "variable",
                 "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
                 "type": "Story<SideNavComponent>",
-                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n              <button mat-button>\n          Toggle sidenav\n        </button>\n            </div>`,\n  props: {\n    ...args\n  }\n})"
+                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
             }
         ],
         "functions": [],
@@ -520,7 +520,7 @@
                     "subtype": "variable",
                     "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
                     "type": "Story<SideNavComponent>",
-                    "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n              <button mat-button>\n          Toggle sidenav\n        </button>\n            </div>`,\n  props: {\n    ...args\n  }\n})"
+                    "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
                 }
             ]
         },

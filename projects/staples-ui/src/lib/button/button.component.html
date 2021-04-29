@@ -1,12 +1,17 @@
-<button
-  [attr.is-pink]="pink"
-  [ngClass]="{'make-pink': pink}"
-  (click)="onClick($event)"
-  mat-raised-button
-  >
-  {{label ? "😎 " + label : "No Label provided 🧐"}}
-</button>
+<div>
+  <button
+    [attr.is-pink]="pink"
+    [ngClass]="{'make-pink': pink}"
+    (click)="onClick($event)"
+    mat-raised-button
+    >
+    {{label ? "😎 " + label : "No Label provided 🧐"}}
+  </button>
 
-<button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-  <mat-icon>delete</mat-icon>
-</button>
+  <button mat-fab aria-label="Example icon button with a delete icon">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <button mat-fab aria-label="Example icon button with a delete icon">
+    <mat-icon>face</mat-icon>
+  </button>
+</div>

@@ -28,9 +28,6 @@ const Template: Story<SideNavComponent> = (args: SideNavComponent) => ({
   template: `<div>This is the header <br/>
               <ui-side-nav>This is inside content</ui-side-nav>
               This is the footer
-              <button mat-button>
-          Toggle sidenav
-        </button>
             </div>`,
   props: {
     ...args

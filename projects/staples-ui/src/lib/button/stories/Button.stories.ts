@@ -13,7 +13,6 @@ export default {
     moduleMetadata({
       declarations: [ButtonComponent],
       imports: [MatButtonModule, MatIconModule]
-
     })
   ],
   argTypes: {
