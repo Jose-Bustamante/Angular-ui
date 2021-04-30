@@ -1,3 +1,4 @@
+import "src/styles/styles.scss";
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -9,7 +10,6 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { ButtonComponent } from './button/button.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
-
 
 
 @NgModule({
