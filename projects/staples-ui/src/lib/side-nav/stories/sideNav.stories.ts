@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 
 
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+
 
 import { SideNavComponent } from '../side-nav.component';
 
@@ -15,7 +17,8 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [SideNavComponent],
-      imports: [CommonModule, BrowserAnimationsModule, BrowserModule, MatSidenavModule]
+      imports: [CommonModule, BrowserAnimationsModule, BrowserModule, MatSidenavModule, MatButtonModule]
+
     })
   ],
 } as Meta;

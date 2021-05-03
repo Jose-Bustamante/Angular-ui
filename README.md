@@ -12,7 +12,7 @@ To build the UI Library
 `ng build --project=staples-ui`
 
 To build the UI Library PROD Ready
-`ng build --project=staples-ui --prod`
+`npm run build:ui-library`
 
 To build the Custom-Elements Project (Prod ready - Minified -  Use this one)
 `npm run build:elements`

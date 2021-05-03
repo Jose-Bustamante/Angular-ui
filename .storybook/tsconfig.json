@@ -11,8 +11,7 @@
     "../projects/**/*.spec.ts"
   ],
   "include": [
-    "../src/**/*",
-    "../projects/**/*"
+    "../projects/staples-ui/**/*"
   ],
   "files": [
     "./typings.d.ts"

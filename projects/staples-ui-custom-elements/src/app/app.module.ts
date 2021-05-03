@@ -1,5 +1,6 @@
 import { NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { createCustomElement } from '@angular/elements';
 
 import {StaplesUiModule} from '../../../staples-ui/src/lib/staples-ui.module';
@@ -9,6 +10,7 @@ import {SideNavComponent} from '../../../staples-ui/src/lib/side-nav/side-nav.co
 
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     StaplesUiModule
   ],
   providers: [],

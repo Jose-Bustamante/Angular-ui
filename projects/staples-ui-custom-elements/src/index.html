@@ -1,13 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>StaplesUiCustomElements</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <app-root></app-root>
+    <h1>Web Component (Costum Elements)</h1>
+    <ce-button click="myFunction()" label="this is the label asd" pink="true"></ce-button>
+    <!-- <ce-button-dos>test</ce-button-dos> -->
+    <br />
+    <ce-side-nav></ce-side-nav>
+    <script>
+        const component = document.querySelector('ce-button');
+        component.addEventListener('valueChanged', (event) => {
+            alert(event.detail);
+            myFunction()
+        });
+
+        function myFunction() {
+            console.log('it worked');
+        }
+    </script>
+
 </body>
 </html>
