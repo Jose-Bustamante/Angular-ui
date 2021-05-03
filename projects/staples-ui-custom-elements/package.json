@@ -13,8 +13,5 @@
   ],
   "author": "Jose Bustamante",
   "license": "ISC",
-  "files": ["main.ts, style.scss"],
-  "dependencies": {
-    "@josebustamante/staples-ui": "^0.0.25"
-  }
+  "files": ["main.ts, style.scss"]
 }
