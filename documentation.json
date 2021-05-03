@@ -208,7 +208,7 @@
         },
         {
             "name": "StaplesUiComponent",
-            "id": "component-StaplesUiComponent-2e7310d37fcfd87258bf3ecb7e1a6f88",
+            "id": "component-StaplesUiComponent-0e3ea3d416387ace1e7220b5ac968bb2",
             "file": "projects/staples-ui/src/lib/staples-ui.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -220,7 +220,7 @@
             "selector": "ui-staples-ui",
             "styleUrls": [],
             "styles": [
-                "./staples-ui.component.scss"
+                "../theme.scss"
             ],
             "template": "",
             "templateUrl": [],
@@ -243,10 +243,10 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'ui-staples-ui',\n  template: ``,\n  styles: ['./staples-ui.component.scss'],\n  encapsulation: ViewEncapsulation.None\n})\nexport class StaplesUiComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'ui-staples-ui',\n  template: ``,\n  styles: ['../theme.scss'],\n  encapsulation: ViewEncapsulation.None\n})\nexport class StaplesUiComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "./staples-ui.component.scss\n",
+            "stylesData": "../theme.scss\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
