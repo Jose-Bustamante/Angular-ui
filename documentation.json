@@ -118,7 +118,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div>\n  <button\n    [attr.is-pink]=\"pink\"\n    [ngClass]=\"{'make-pink': pink}\"\n    (click)=\"onClick($event)\"\n    mat-raised-button\n    >\n    {{label ? \"😎 \" + label : \"No Label provided 🧐\"}}\n  </button>\n\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>delete</mat-icon>\n  </button>\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>face</mat-icon>\n  </button>\n</div>"
+            "templateData": "<div>\n  <button\n    [attr.is-pink]=\"pink\"\n    [ngClass]=\"{'make-pink': pink}\"\n    (click)=\"onClick($event)\"\n    mat-raised-button\n    >\n    {{label ? \"😎 \" + label : \"No Label provided 🧐\"}}\n  </button>\n\n  <button mat-fab color=\"warm\" aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>delete</mat-icon>\n  </button>\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>face</mat-icon>\n  </button>\n</div>"
         },
         {
             "name": "SideNavComponent",
@@ -208,17 +208,21 @@
         },
         {
             "name": "StaplesUiComponent",
-            "id": "component-StaplesUiComponent-48e362b362721d8e7109f6572ca3e2fd",
+            "id": "component-StaplesUiComponent-2e7310d37fcfd87258bf3ecb7e1a6f88",
             "file": "projects/staples-ui/src/lib/staples-ui.component.ts",
-            "encapsulation": [],
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
             "selector": "ui-staples-ui",
             "styleUrls": [],
-            "styles": [],
-            "template": "<p>\n  staples-ui works!\n</p>\n",
+            "styles": [
+                "./staples-ui.component.scss"
+            ],
+            "template": "",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [],
@@ -231,7 +235,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17
+                    "line": 13
                 }
             ],
             "hostBindings": [],
@@ -239,15 +243,15 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ui-staples-ui',\n  template: `\n    <p>\n      staples-ui works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class StaplesUiComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'ui-staples-ui',\n  template: ``,\n  styles: ['./staples-ui.component.scss'],\n  encapsulation: ViewEncapsulation.None\n})\nexport class StaplesUiComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": "",
+            "stylesData": "./staples-ui.component.scss\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 13
+                "line": 9
             },
             "implements": [
                 "OnInit"
@@ -408,17 +412,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
-                "type": "Story<SideNavComponent>",
-                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
+                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
+                "type": "Story<SideNavComponent>",
+                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
             }
         ],
         "functions": [],

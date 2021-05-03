@@ -10,10 +10,10 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $candy-app-primary: mat-palette($mat-indigo);
-$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$candy-app-accent:  mat-palette($mat-red, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$candy-app-warn:    mat-palette($mat-red);
+$candy-app-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as `color` or `typography`.
@@ -29,3 +29,20 @@ $candy-app-theme: mat-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($candy-app-theme);
+
+
+// $custom-collection: (
+//     warning :  #FFC116,
+//     success :  #0a630f,
+//     danger:    #c00000,
+//     contrast: (
+//         warning :  #000000,
+//         success :  #FFFFFF,
+//         danger:    #FFFFFF,
+//     )
+// );
+
+// $my-app-custom: mat-palette($custom-collection, custom);
+// $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn); // this row your should have already in your code where you select palettes for primary, accent and warn
+// $my-app-theme: map_merge($my-app-theme, (custom: $my-app-custom));
+// $custom: map-get($my-app-theme, custom);

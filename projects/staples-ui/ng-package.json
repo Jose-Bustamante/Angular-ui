@@ -3,9 +3,9 @@
   "dest": "../../dist/staples-ui",
   "lib": {
     "entryFile": "src/public-api.ts",
-    "styleIncludePaths": ["src/styles"]
+    "styleIncludePaths": ["projects/staples-ui/src/lib/styles"]
   },
   "assets": [
-    "src/styles/*.scss"
+    "src/*.scss"
   ]
 }

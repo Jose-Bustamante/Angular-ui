@@ -1,14 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'ui-staples-ui',
-  template: `
-    <p>
-      staples-ui works!
-    </p>
-  `,
-  styles: [
-  ]
+  template: ``,
+  styles: ['./staples-ui.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class StaplesUiComponent implements OnInit {
 
