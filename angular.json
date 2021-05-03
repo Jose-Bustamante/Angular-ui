@@ -18,8 +18,7 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/staples-ui/tsconfig.lib.json",
-            "project": "projects/staples-ui/ng-package.json",
-            "styles": ["projects/staples-ui/src/theme.scss"]
+            "project": "projects/staples-ui/ng-package.json"
           },
           "configurations": {
             "production": {
