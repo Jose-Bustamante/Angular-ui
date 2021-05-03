@@ -6,6 +6,6 @@
     "styleIncludePaths": ["projects/staples-ui/src/lib/styles"]
   },
   "assets": [
-    "src/*.scss"
+    "src/*.theme.*"
   ]
 }

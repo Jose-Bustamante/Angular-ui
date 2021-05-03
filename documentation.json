@@ -412,17 +412,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
+                "type": "Story<SideNavComponent>",
+                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
-                "type": "Story<SideNavComponent>",
-                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
+                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],

@@ -4,7 +4,7 @@ import docJson from "../documentation.json";
 setCompodocJson(docJson);
 
 // Build and load the Theme SCSS into StoryBook
-import '!style-loader!css-loader!sass-loader!../projects/staples-ui/src/theme.scss';
+import '!style-loader!css-loader!sass-loader!../projects/staples-ui/src/staples-ui.theme.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

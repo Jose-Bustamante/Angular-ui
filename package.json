@@ -12,7 +12,9 @@
     "build-storybook": "npm run docs:json && build-storybook",
     "e2e": "ng e2e",
     "build:elements": "ng build --prod --project staples-ui-custom-elements --output-hashing none && npm run pack:elements && cp projects/staples-ui-custom-elements/package.json dist/staples-ui-custom-elements",
-    "pack:elements": "cat ./dist/staples-ui-custom-elements/{runtime,polyfills,main}.js > dist/staples-ui-custom-elements/elements.js && ls -lah dist/staples-ui-custom-elements/elements.js"
+    "pack:elements": "cat ./dist/staples-ui-custom-elements/{runtime,polyfills,main}.js > dist/staples-ui-custom-elements/elements.js && ls -lah dist/staples-ui-custom-elements/elements.js",
+    "bundle-styles": "sass --embed-sources --style=compressed projects/staples-ui/src/*.theme.scss dist/staples-ui/src/min-theme.css",
+    "build:ui-library": "ng build --prod --project staples-ui && npm run bundle-styles"
   },
   "private": true,
   "dependencies": {
@@ -57,6 +59,7 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
+    "sass": "^1.27.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.5"
