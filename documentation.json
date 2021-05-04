@@ -118,7 +118,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div>\n    <button mat-button color=\"primary\">Primary</button>\n</div>\n"
+            "templateData": "<div>\n    <button mat-icon-button color=\"primary\" aria-label=\"Example icon button with a vertical three dot icon\">\n        <mat-icon>more_vert</mat-icon>\n    </button>\n</div>\n"
         },
         {
             "name": "SideNavComponent",
@@ -338,7 +338,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -346,17 +346,9 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/environments/environment.prod.ts",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "environment",
@@ -367,33 +359,33 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
-                "name": "FancyBlueButton",
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/staples-ui-custom-elements/src/environments/environment.prod.ts",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "IconButton",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "FancyPinkButton",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "require",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
-                "type": "literal type"
             },
             {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/staples-ui/src/test.ts",
+                "type": "literal type"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "literal type"
             },
             {
@@ -408,40 +400,23 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
-                "type": "Story<SideNavComponent>",
-                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
+                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n component: ButtonComponent,\n props: args,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "file": "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts",
+                "type": "Story<SideNavComponent>",
+                "defaultValue": "(args: SideNavComponent) => ({\n  component: SideNavComponent,\n  template: `<div>This is the header <br/>\n              <ui-side-nav>This is inside content</ui-side-nav>\n              This is the footer\n            </div>`,\n  props: {\n    ...args\n  }\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/staples-ui-custom-elements/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui-custom-elements/src/test.ts",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui-custom-elements/src/test.ts",
-                    "type": "literal type"
-                }
-            ],
             "projects/staples-ui/src/test.ts": [
                 {
                     "name": "context",
@@ -459,14 +434,21 @@
                     "type": "literal type"
                 }
             ],
-            "projects/staples-ui-custom-elements/src/environments/environment.prod.ts": [
+            "projects/staples-ui-custom-elements/src/test.ts": [
                 {
-                    "name": "environment",
+                    "name": "context",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/staples-ui-custom-elements/src/environments/environment.prod.ts",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
+                    "file": "projects/staples-ui-custom-elements/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui-custom-elements/src/test.ts",
+                    "type": "literal type"
                 }
             ],
             "projects/staples-ui-custom-elements/src/environments/environment.ts": [
@@ -479,17 +461,19 @@
                     "defaultValue": "{\n  production: false\n}"
                 }
             ],
-            "projects/staples-ui/src/lib/button/stories/Button.stories.ts": [
+            "projects/staples-ui-custom-elements/src/environments/environment.prod.ts": [
                 {
-                    "name": "FancyBlueButton",
+                    "name": "environment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
+                    "file": "projects/staples-ui-custom-elements/src/environments/environment.prod.ts",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "projects/staples-ui/src/lib/button/stories/Button.stories.ts": [
                 {
-                    "name": "FancyPinkButton",
+                    "name": "IconButton",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
@@ -502,7 +486,7 @@
                     "subtype": "variable",
                     "file": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
                     "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                    "defaultValue": "(args: ButtonComponent) => ({\n component: ButtonComponent,\n props: args,\n})"
                 }
             ],
             "projects/staples-ui/src/lib/side-nav/stories/sideNav.stories.ts": [
@@ -587,17 +571,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "FancyBlueButton",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/staples-ui/src/lib/button/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "FancyPinkButton",
+                "name": "IconButton",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
