@@ -1,9 +1,9 @@
 @use "sass:map";
-// @use "../../styles/colors" as colors;
+@use "../../styles/colors" as colors;
 
-@import "../../styles/colors";
+// @import "../../styles/colors";
 
 button[mat-fab] {
-  color: map-get($staples-colors, "staplesRed");
-  background-color: $random-color;
+  color: map-get(colors.$staples-colors, "staplesBlue");
+  background-color: colors.$random-color;
 }

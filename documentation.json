@@ -87,7 +87,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../staples-ui.theme.scss';\n\n.mat-success {\n  background-color: mat-color($custom, success);\n  color: mat-color($custom, success-contrast);\n}",
+                    "data": "@use \"sass:map\";\n@use \"../../styles/colors\" as colors;\n\n// @import \"../../styles/colors\";\n\nbutton[mat-fab] {\n  color: map-get(colors.$staples-colors, \"staplesBlue\");\n  background-color: colors.$random-color;\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -101,7 +101,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div>\n  <button\n    [attr.is-pink]=\"pink\"\n    [ngClass]=\"{'make-pink': pink}\"\n    (click)=\"onClick($event)\"\n    mat-raised-button\n    >\n    {{label ? \"😎 \" + label : \"No Label provided 🧐\"}}\n  </button>\n\n  <button mat-fab color=\"warm\" aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>delete</mat-icon>\n  </button>\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>face</mat-icon>\n  </button>\n</div>"
+            "templateData": "<div>\n  <button\n    [attr.is-pink]=\"pink\"\n    [ngClass]=\"{'make-pink': pink}\"\n    (click)=\"onClick($event)\"\n    mat-raised-button\n    >\n    {{label ? \"😎 \" + label : \"No Label provided 🧐\"}}\n  </button>\n\n    <button mat-fab >\n      <mat-icon>delete</mat-icon>\n    </button>\n\n  <button mat-fab aria-label=\"Example icon button with a delete icon\">\n    <mat-icon>face</mat-icon>\n  </button>\n</div>"
         },
         {
             "name": "SideNavComponent",
@@ -274,7 +274,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -282,7 +282,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -322,14 +322,14 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "literal type"
             },
             {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "literal type"
             },
             {
@@ -361,23 +361,6 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/staples-ui-custom-elements/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui-custom-elements/src/test.ts",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui-custom-elements/src/test.ts",
-                    "type": "literal type"
-                }
-            ],
             "projects/staples-ui/src/test.ts": [
                 {
                     "name": "context",
@@ -392,6 +375,23 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/staples-ui/src/test.ts",
+                    "type": "literal type"
+                }
+            ],
+            "projects/staples-ui-custom-elements/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui-custom-elements/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui-custom-elements/src/test.ts",
                     "type": "literal type"
                 }
             ],

@@ -14,7 +14,8 @@
     "build:elements": "ng build --prod --project staples-ui-custom-elements --output-hashing none && npm run pack:elements && cp projects/staples-ui-custom-elements/package.json dist/staples-ui-custom-elements",
     "pack:elements": "cat ./dist/staples-ui-custom-elements/{runtime,polyfills,main}.js > dist/staples-ui-custom-elements/elements.js && ls -lah dist/staples-ui-custom-elements/elements.js",
     "bundle-styles": "sass --embed-sources --style=compressed projects/staples-ui/src/*.theme.scss dist/staples-ui/src/min-theme.css",
-    "build:ui-library": "ng build --prod --project staples-ui && npm run bundle-styles"
+    "build:ui-library-bundle-styles": "ng build --prod --project staples-ui && npm run bundle-styles",
+    "build:ui-library": "ng build --prod --project staples-ui"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +47,7 @@
     "@storybook/addon-essentials": "^6.1.17",
     "@storybook/addon-links": "^6.1.17",
     "@storybook/angular": "^6.1.17",
+    "@storybook/preset-scss": "^1.0.3",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "babel-loader": "^8.2.2",
@@ -62,6 +64,7 @@
     "sass": "^1.27.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.5"
+    "typescript": "~4.0.5",
+    "webpack": "^4.44.2"
   }
 }
