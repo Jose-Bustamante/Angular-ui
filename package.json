@@ -13,8 +13,6 @@
     "e2e": "ng e2e",
     "build:elements": "ng build --prod --project staples-ui-custom-elements --output-hashing none && npm run pack:elements && cp projects/staples-ui-custom-elements/package.json dist/staples-ui-custom-elements",
     "pack:elements": "cat ./dist/staples-ui-custom-elements/{runtime,polyfills,main}.js > dist/staples-ui-custom-elements/elements.js && ls -lah dist/staples-ui-custom-elements/elements.js",
-    "bundle-styles": "sass --embed-sources --style=compressed projects/staples-ui/src/*.theme.scss dist/staples-ui/src/min-theme.css",
-    "build:ui-library-bundle-styles": "ng build --prod --project staples-ui && npm run bundle-styles",
     "build:ui-library": "ng build --prod --project staples-ui"
   },
   "private": true,

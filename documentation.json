@@ -274,7 +274,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -282,7 +282,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -322,14 +322,14 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui/src/test.ts",
+                "file": "projects/staples-ui-custom-elements/src/test.ts",
                 "type": "literal type"
             },
             {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/staples-ui-custom-elements/src/test.ts",
+                "file": "projects/staples-ui/src/test.ts",
                 "type": "literal type"
             },
             {
@@ -361,23 +361,6 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/staples-ui/src/test.ts": [
-                {
-                    "name": "context",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui/src/test.ts",
-                    "type": "",
-                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
-                },
-                {
-                    "name": "require",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/staples-ui/src/test.ts",
-                    "type": "literal type"
-                }
-            ],
             "projects/staples-ui-custom-elements/src/test.ts": [
                 {
                     "name": "context",
@@ -392,6 +375,23 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/staples-ui-custom-elements/src/test.ts",
+                    "type": "literal type"
+                }
+            ],
+            "projects/staples-ui/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui/src/test.ts",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/staples-ui/src/test.ts",
                     "type": "literal type"
                 }
             ],
