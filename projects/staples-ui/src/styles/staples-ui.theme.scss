@@ -1,8 +1,6 @@
 // @import '~@angular/material/_theming.scss';
 
-// Direct import not working for some reason
-
-@import '../../../node_modules/@angular/material/theming';
+@import '~@angular/material/theming';
 
 // Import Material design Icons
 @import '~material-design-icons/iconfont/material-icons.css';
@@ -32,24 +30,22 @@ $candy-app-theme: mat-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include angular-material-theme($candy-app-theme);
 
 
-// // $custom-collection: (
-// //     warning :  #FFC116,
-// //     success :  #0a630f,
-// //     danger:    #c00000,
-// //     contrast: (
-// //         warning :  #000000,
-// //         success :  #FFFFFF,
-// //         danger:    #FFFFFF,
-// //     )
-// // );
+// SCSS map export way
+$staples-colors: (
+  "staplesRed": rgb(21, 200, 45),
+  "staplesBlue": #876673,
+);
 
-// // $my-app-custom: mat-palette($custom-collection, custom);
-// // $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn); // this row your should have already in your code where you select palettes for primary, accent and warn
-// // $my-app-theme: map_merge($my-app-theme, (custom: $my-app-custom));
-// // $custom: map-get($my-app-theme, custom);
+// Angular + native CSS way
+:root
+{
+--staplesBlue: rgb(21, 200, 45); // or any global you wish to share with components
+$colors: ("StaplesRed": rgb(21, 200, 45), "StaplesBlue": #876673, "bold": 700);
+
+}
+
+
+
